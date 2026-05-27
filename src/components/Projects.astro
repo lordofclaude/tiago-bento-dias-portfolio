@@ -1,0 +1,39 @@
+---
+import { profile } from "../data/profile";
+---
+
+<section id="projects" class="px-6 py-24">
+  <div class="fade-in mx-auto max-w-[1100px]">
+    <h2 class="mb-4 text-3xl font-bold text-[#e5e7eb]">Projects</h2>
+    <div class="mb-12 h-1 w-16 rounded bg-[#3b82f6]"></div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {
+        profile.projects.map((project) => (
+          <article class="flex flex-col rounded-xl border border-white/5 bg-[#111827] p-6 transition-colors hover:border-[#3b82f6]/30 hover:bg-[#1a2332]">
+            <h3 class="mb-2 text-xl font-semibold text-[#e5e7eb]">
+              {project.title}
+            </h3>
+            <p class="mb-4 text-sm text-[#3b82f6]">{project.context}</p>
+            <ul class="mb-6 flex-1 space-y-2">
+              {project.bullets.map((bullet) => (
+                <li class="flex gap-2 text-sm leading-relaxed text-[#9ca3af]">
+                  <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3b82f6]"></span>
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-medium text-[#3b82f6] hover:text-[#2563eb] transition-colors"
+            >
+              View on LinkedIn →
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

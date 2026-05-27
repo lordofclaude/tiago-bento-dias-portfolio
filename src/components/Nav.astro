@@ -1,0 +1,37 @@
+---
+import { profile } from "../data/profile";
+---
+
+<header
+  class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#0a0a0f]/80 backdrop-blur-md"
+>
+  <nav
+    class="mx-auto flex max-w-[1100px] items-center justify-between px-6 py-4"
+  >
+    <a href="#" class="text-lg font-semibold text-[#e5e7eb] hover:text-[#3b82f6] transition-colors">
+      {profile.name.split(" ")[0]} {profile.name.split(" ")[2]}
+    </a>
+
+    <ul class="hidden items-center gap-8 md:flex">
+      {
+        profile.nav.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="text-sm text-[#9ca3af] hover:text-[#3b82f6] transition-colors"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <a
+      href="#contact"
+      class="rounded-lg bg-[#3b82f6] px-4 py-2 text-sm font-medium text-white hover:bg-[#2563eb] transition-colors"
+    >
+      Contact
+    </a>
+  </nav>
+</header>

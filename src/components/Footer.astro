@@ -1,0 +1,30 @@
+---
+import { profile } from "../data/profile";
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5 px-6 py-8">
+  <div
+    class="mx-auto flex max-w-[1100px] flex-col items-center justify-between gap-4 sm:flex-row"
+  >
+    <p class="text-sm text-[#6b7280]">
+      © {year} {profile.name}. All rights reserved.
+    </p>
+    <div class="flex items-center gap-6">
+      <a
+        href={`mailto:${profile.email}`}
+        class="text-sm text-[#9ca3af] hover:text-[#3b82f6] transition-colors"
+      >
+        {profile.email}
+      </a>
+      <a
+        href={profile.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-[#9ca3af] hover:text-[#3b82f6] transition-colors"
+      >
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>

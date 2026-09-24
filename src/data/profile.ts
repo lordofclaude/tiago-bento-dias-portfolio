@@ -5,8 +5,6 @@ export const profile = {
   role: "Associate Director, Strategy",
   company: "impact.com",
   location: "London, United Kingdom",
-  email: "tiagobentodias@gmail.com",
-  linkedin: "https://www.linkedin.com/in/tiagobentodias",
   about: `A seasoned professional with a multifaceted background in strategy consulting, investment banking, hedge fund investment analysis, and strategic leadership within the tech sector. I bring together deep financial expertise and a strong foundation in investment analysis, data science, financial modeling, and business strategy.
 
 I leverage advanced analytical insights to shape strategic initiatives, foster cross-functional collaboration, and drive innovation. My unique blend of skills and experience positions me to lead impactful, growth-oriented projects that align technology and finance for transformative outcomes.`,
